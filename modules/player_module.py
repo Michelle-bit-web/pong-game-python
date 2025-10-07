@@ -7,12 +7,17 @@ class Player(Turtle):
         self.shape("square")
         self.shapesize(stretch_wid=5, stretch_len=1)
         self.goto(player_position)
+        self.starting_position = player_position
         self.color("white")
 
     def move_up(self):
-        new_y = self.ycor() + 20
-        self.goto(self.xcor(), new_y)
+        if -250 <= self.ycor() or self.ycor() <= 250:
+            new_y = self.ycor() + 20
+            self.goto(self.xcor(), new_y)
 
     def move_down(self):
         new_y = self.ycor() - 20
         self.goto(self.xcor(), new_y)
+
+    def reset(self):
+        self.goto(self.starting_position)
