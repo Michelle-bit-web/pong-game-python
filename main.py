@@ -28,4 +28,11 @@ while not game_over:
     screen.update()  # manual update when tracer=0
     ball.move()
 
+    #Detect collisions
+    if ball.ycor() > 270 or ball.ycor() < -270:
+        ball.bounce_y()
+    if ball.xcor() > player_1.xcor()-20 or ball.xcor() < player_2.xcor()+20:
+        ball.bounce_x()
+
+
 screen.exitonclick()
