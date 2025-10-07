@@ -26,3 +26,8 @@ class Scoreboard(Turtle):
             self.r_score += 1
             self.clear()
             self.draw_scores()
+
+    def show_endscreen(self, winner):
+        self.goto(0, 0)
+        self.color("MediumOrchid1")
+        self.write(f"{winner} wins!\nPress 'r' to replay.", align="center", font=("Courier", 24, "normal"))
