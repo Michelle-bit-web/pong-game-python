@@ -1,4 +1,4 @@
-# |  °     | Python Pong Game
+# |&nbsp;&nbsp;°&nbsp;&nbsp;&nbsp;&nbsp;| Python Pong Game
 
 A classic Pong game built entirely in Python using the `turtle` graphics library.
 
